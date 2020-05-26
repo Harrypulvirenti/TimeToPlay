@@ -2,6 +2,8 @@
 ===========================
 ## ⏰ Time To Play 🕹
 
+[![Build Status](https://app.bitrise.io/app/042e755634de294f/status.svg?token=rDy4xlHVAsiruNWYhyAPMQ&branch=master)](https://app.bitrise.io/app/042e755634de294f)
+
 Overview
 --------
 Time To Play is a showcase project of a Game Tracker application
