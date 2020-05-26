@@ -11,7 +11,7 @@ keeping track of the played/unplayed games, rating games and discovering new one
 Tech Specs
 ----------
 The main focus of this project is to use and play with all the latest best technologies available for Android Development.
-TTP is entirely written in Kotlin and it uses lots of useful libraries, that is right now a defacto standard.
+TTP is entirely written in Kotlin and it uses lots of useful libraries, that are right now a defacto standard.
 Some examples:
 *  [Android Architecture Components](https://developer.android.com/topic/libraries/architecture)
 *  [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
