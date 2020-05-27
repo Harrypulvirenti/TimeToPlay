@@ -42,7 +42,7 @@ private fun BaseExtension.applyBuildTypes() {
 private fun BaseExtension.applyLint(project: Project) {
     lintOptions {
         disable("InvalidPackage")
-        baseline(project.file("lint-errors.xml"))
+        baseline(project.file("lint-baseline.xml"))
         isCheckAllWarnings = true
         isWarningsAsErrors = true
         isAbortOnError = true
