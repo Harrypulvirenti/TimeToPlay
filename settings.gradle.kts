@@ -5,6 +5,7 @@ include(
     ":shared-interfaces",
     ":extensions-kotlin",
     ":extensions-android",
+    ":test-implementation",
     ":core"
 )
 
