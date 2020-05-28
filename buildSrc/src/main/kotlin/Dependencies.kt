@@ -18,6 +18,7 @@ object Libraries {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 
     // Lifecycle
     const val lifecycleViewModel =

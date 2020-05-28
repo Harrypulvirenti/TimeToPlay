@@ -15,6 +15,7 @@ fun Project.commonBaseDependencies() {
 
 fun DependencyHandlerScope.androidSupport() {
     implementation(Libraries.appCompat)
+    implementation(Libraries.fragment)
     implementation(Libraries.constraintLayout)
 }
 

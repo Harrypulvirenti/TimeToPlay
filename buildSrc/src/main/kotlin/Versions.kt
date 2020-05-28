@@ -10,6 +10,7 @@ internal object Versions {
     const val arrow = "0.10.5"
     const val constraintLayout = "2.0.0-beta6"
     const val appCompat = "1.2.0-rc01"
+    const val fragment = "1.2.4"
     const val lifecycle = "2.3.0-alpha03"
     const val lifecycleTest = "2.1.0"
     const val koin = "2.1.5"

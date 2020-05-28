@@ -1,6 +1,8 @@
 rootProject.name = "Time To Play"
 
 include(
-    ":mobile-app"
+    ":mobile-app",
+    ":extensions-kotlin",
+    ":extensions-android"
 )
 
