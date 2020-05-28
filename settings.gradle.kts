@@ -4,6 +4,7 @@ include(
     ":mobile-app",
     ":shared-interfaces",
     ":extensions-kotlin",
-    ":extensions-android"
+    ":extensions-android",
+    ":core"
 )
 

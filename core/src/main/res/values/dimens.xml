@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Margins-->
+    <dimen name="material_margin_single">8dp</dimen>
+    <dimen name="material_margin_double">16dp</dimen>
+    <dimen name="material_margin_quintuple">40dp</dimen>
+
+</resources>
