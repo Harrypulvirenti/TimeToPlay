@@ -8,4 +8,5 @@ object Modules {
     const val kotlinExtensions = ":extensions-kotlin"
     const val androidExtensions = ":extensions-android"
     const val core = ":core"
+    const val navigation = ":navigation"
 }

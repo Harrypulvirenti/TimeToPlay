@@ -6,6 +6,6 @@ include(
     ":extensions-kotlin",
     ":extensions-android",
     ":test-implementation",
-    ":core"
+    ":core",
+    ":navigation"
 )
-

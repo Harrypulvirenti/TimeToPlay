@@ -12,6 +12,9 @@ applyAndroidDefault()
 dependencies {
     commonBaseDependencies()
 
-    // Coroutine
-    implementation(Libraries.coroutinesCore)
+    implementation(Libraries.appCompat)
+    implementation(Libraries.fragment)
+
+    // Koin
+    implementation(Libraries.koinAndroid)
 }
