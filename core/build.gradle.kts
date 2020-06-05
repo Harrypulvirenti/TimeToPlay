@@ -14,7 +14,10 @@ applyAndroidDefault()
 dependencies {
     commonBaseDependencies()
 
-    implementationProject(Modules.sharedInterfaces)
+    implementationProject(
+        Modules.sharedInterfaces,
+        Modules.androidExtensions
+    )
 
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
