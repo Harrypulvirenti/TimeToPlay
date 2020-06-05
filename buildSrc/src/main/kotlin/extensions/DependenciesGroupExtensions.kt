@@ -1,6 +1,7 @@
 package extensions
 
 import Libraries
+import Modules
 import TestLibraries
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.DependencyHandlerScope
@@ -27,7 +28,6 @@ fun DependencyHandlerScope.arrow() {
 
 fun DependencyHandlerScope.lifecycle() {
     implementation(Libraries.lifecycleViewModel)
-    implementation(Libraries.lifecycleLiveData)
     implementation(Libraries.lifecycleRuntime)
     implementation(Libraries.lifecycleSavedState)
     kapt(Libraries.lifecycleCompiler)
@@ -52,14 +52,26 @@ fun DependencyHandlerScope.testingCommon() {
     testImplementation(TestLibraries.koTestRunner)
     testImplementation(TestLibraries.koTestAssertionsCore)
     testImplementation(TestLibraries.koTestProperty)
-    testImplementation(TestLibraries.koTestArrow)
 }
 
 fun DependencyHandlerScope.featureBaseDependencies() {
+
+    implementationProject(
+        Modules.kotlinExtensions,
+        Modules.androidExtensions,
+        Modules.sharedInterfaces,
+        Modules.core,
+        Modules.navigation
+    )
+
+
     androidSupport()
-    arrow()
     lifecycle()
-    coroutines()
     koin()
+    coroutines()
+
+    testImplementationProject(Modules.testImplementation)
     testingCommon()
+    testImplementation(TestLibraries.lifecycleTest)
+    testImplementation(TestLibraries.flowTesting)
 }

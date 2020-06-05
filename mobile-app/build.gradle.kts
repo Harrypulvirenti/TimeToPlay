@@ -1,3 +1,4 @@
+import Modules.core
 import Modules.mobileFeatures
 import extensions.applyAndroidDefault
 import extensions.commonBaseDependencies
@@ -14,8 +15,9 @@ applyAndroidDefault(ApplicationId.mobile)
 dependencies {
     commonBaseDependencies()
 
+    implementationProject(core)
     implementationProject(mobileFeatures)
 
     implementation(Libraries.appCompat)
-    implementation(Libraries.constraintLayout)
+    implementation(Libraries.koinAndroid)
 }

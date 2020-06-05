@@ -7,5 +7,6 @@ include(
     ":extensions-android",
     ":test-implementation",
     ":core",
-    ":navigation"
+    ":navigation",
+    ":splash-feature"
 )

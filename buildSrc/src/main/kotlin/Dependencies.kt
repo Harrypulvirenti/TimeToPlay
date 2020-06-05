@@ -21,9 +21,7 @@ object Libraries {
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 
     // Lifecycle
-    const val lifecycleViewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
-    const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val lifecycleSavedState =
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycle}"
@@ -57,7 +55,9 @@ object TestLibraries {
     const val coroutinesTest =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
 
-    const val lifecycleTest = "ndroidx.arch.core:core-testing:${Versions.lifecycleTest}"
+    const val lifecycleTest = "androidx.arch.core:core-testing:${Versions.lifecycleTest}"
 
     const val koinTesting = "org.koin:koin-test:${Versions.koin}"
+
+    const val flowTesting = "com.github.ologe:flow-test-observer:${Versions.flowTesting}"
 }

@@ -1,5 +1,6 @@
 package com.ttp.testimplementation
 
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.TestCoroutineScope
 import kotlinx.coroutines.test.resetMain
@@ -28,6 +29,6 @@ class CoroutineTestRule : TestRule {
             }
         }
 
-    fun runBlockingTest(block: suspend TestCoroutineScope.() -> Unit) =
+    fun runBlockingTest(block: suspend CoroutineScope.() -> Unit) =
         coroutineScope.runBlockingTest(block)
 }

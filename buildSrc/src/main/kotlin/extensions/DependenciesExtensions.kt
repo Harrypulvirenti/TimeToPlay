@@ -21,6 +21,15 @@ fun DependencyHandler.apiProject(modules: Iterable<String>) {
     }
 }
 
+fun DependencyHandler.testImplementationProject(vararg module: String) =
+    testImplementationProject(module.asIterable())
+
+fun DependencyHandler.testImplementationProject(modules: Iterable<String>) {
+    modules.forEach {
+        add("testImplementation", project(it))
+    }
+}
+
 internal fun DependencyHandler.implementation(dependency: Any) {
     add("implementation", dependency)
 }

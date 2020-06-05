@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <issues format="5" by="lint 4.0.0" client="gradle" variant="debug" version="4.0.0">
 
+    <issue
+        id="ObsoleteLintCustomCheck"
+        message="Lint found an issue registry (`androidx.fragment.lint.FragmentIssueRegistry`) which is older than the current API level; these checks may not work correctly.&#xA;&#xA;Recompile the checks against the latest version. Custom check API version is 6 (3.6), current lint API level is 7 (4.0+)">
+        <location
+            file="../../../../.gradle/caches/transforms-2/files-2.1/006b00b8111d244dbf65f73f66ecdef8/fragment-1.2.4/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        message="Lint found an issue registry (`androidx.lifecycle.lint.LifecycleRuntimeIssueRegistry`) which is older than the current API level; these checks may not work correctly.&#xA;&#xA;Recompile the checks against the latest version. Custom check API version is 6 (3.6), current lint API level is 7 (4.0+)">
+        <location
+            file="../../../../.gradle/caches/transforms-2/files-2.1/baf1fd785a5f0565a7ba2e348fb33a28/jetified-lifecycle-runtime-ktx-2.2.0/jars/lint.jar"/>
+    </issue>
+
 </issues>

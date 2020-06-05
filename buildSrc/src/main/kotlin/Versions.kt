@@ -19,6 +19,7 @@ internal object Versions {
     const val runner = "1.2.0"
     const val mockk = "1.9.3.kotlin12"
     const val koTest = "4.0.3"
+    const val flowTesting = "1.4.1"
     const val robolectric = "4.3.1"
     const val logger = "2.2.0"
 }
