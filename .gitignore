@@ -87,3 +87,4 @@ fastlane/readme.md
 
 # KotlinTest
 */.kotlintest
+/buildSrc/src/main/kotlin/Secrets.kt
