@@ -6,6 +6,7 @@ include(
     ":extensions-kotlin",
     ":extensions-android",
     ":test-implementation",
+    ":entities",
     ":core",
     ":navigation",
     ":splash-feature"
