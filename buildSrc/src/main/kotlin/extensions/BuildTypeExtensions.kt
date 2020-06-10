@@ -15,3 +15,6 @@ fun NamedDomainObjectContainer<BuildType>.release(
 ) {
     getByName("release", configureClosure)
 }
+
+inline fun <reified T : Any> BuildType.buildConfigField(name: String, value: T) =
+    buildConfigField(T::class.java.name, name, value.toString())

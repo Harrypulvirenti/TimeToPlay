@@ -56,3 +56,13 @@ private fun BaseExtension.applyTestOptions() {
         }
     }
 }
+
+inline fun <reified T : Any> BaseExtension.defaultBuildConfigField(name: String, value: T) {
+    defaultConfig {
+        buildConfigField(
+            T::class.java.name,
+            name,
+            value.toString()
+        )
+    }
+}
