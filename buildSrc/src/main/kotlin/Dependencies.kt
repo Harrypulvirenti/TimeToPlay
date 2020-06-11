@@ -21,7 +21,8 @@ object Libraries {
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 
     // Lifecycle
-    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val lifecycleSavedState =
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycle}"
@@ -33,6 +34,16 @@ object Libraries {
     const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
     const val koinFragment = "org.koin:koin-androidx-fragment:${Versions.koin}"
     const val koinExperimental = "org.koin:koin-androidx-ext:${Versions.koin}"
+
+    //         Retrofit 2
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+
+    const val retrofitInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.retrofitInterceptor}"
+
+    const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
 
     // Logger
     const val logger = "com.orhanobut:logger:${Versions.logger}"
@@ -60,4 +71,8 @@ object TestLibraries {
     const val koinTesting = "org.koin:koin-test:${Versions.koin}"
 
     const val flowTesting = "com.github.ologe:flow-test-observer:${Versions.flowTesting}"
+
+    const val retrofitMockWebServer =
+        "com.squareup.okhttp3:mockwebserver:${Versions.retrofitMockWebServer}"
+    const val guava = "com.google.guava:guava:${Versions.guava}"
 }

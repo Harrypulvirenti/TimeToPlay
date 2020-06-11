@@ -14,6 +14,10 @@ internal object Versions {
     const val lifecycle = "2.3.0-alpha03"
     const val lifecycleTest = "2.1.0"
     const val koin = "2.1.5"
+    const val retrofit = "2.9.0"
+    const val retrofitInterceptor = "4.7.2"
+    const val retrofitMockWebServer = "4.7.2"
+    const val moshi = "1.9.2"
     const val junit = "1.1.1"
     const val espresso = "3.2.0"
     const val runner = "1.2.0"
@@ -22,4 +26,5 @@ internal object Versions {
     const val flowTesting = "1.4.1"
     const val robolectric = "4.3.1"
     const val logger = "2.2.0"
+    const val guava = "29.0-jre"
 }

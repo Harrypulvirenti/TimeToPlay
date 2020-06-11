@@ -46,6 +46,11 @@ fun DependencyHandlerScope.koin() {
     implementation(Libraries.koinExperimental)
 }
 
+fun DependencyHandlerScope.moshi() {
+    implementation(Libraries.moshi)
+    kapt(Libraries.moshiCodegen)
+}
+
 fun DependencyHandlerScope.testingCommon() {
     testImplementation(TestLibraries.junit)
     testImplementation(TestLibraries.mockk)
