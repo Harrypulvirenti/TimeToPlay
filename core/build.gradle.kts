@@ -27,7 +27,6 @@ dependencies {
 
     // Koin
     implementation(Libraries.koinAndroid)
-    implementation(Libraries.koinFragment)
 
     // Logger
     implementation(Libraries.logger)

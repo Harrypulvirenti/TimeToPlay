@@ -42,7 +42,6 @@ fun DependencyHandlerScope.koin() {
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinScope)
     implementation(Libraries.koinViewModel)
-    implementation(Libraries.koinFragment)
     implementation(Libraries.koinExperimental)
 }
 
