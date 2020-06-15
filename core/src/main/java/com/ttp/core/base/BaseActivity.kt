@@ -3,13 +3,12 @@ package com.ttp.core.base
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import com.ttp.core.R
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.unloadKoinModules
 import org.koin.core.module.Module
 
 abstract class BaseActivity(
-    @LayoutRes private val layoutId: Int = R.layout.activity_single_fragment
+    @LayoutRes private val layoutId: Int
 ) : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

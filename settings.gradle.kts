@@ -10,5 +10,6 @@ include(
     ":network",
     ":core",
     ":navigation",
+    ":launch-feature",
     ":splash-feature"
 )

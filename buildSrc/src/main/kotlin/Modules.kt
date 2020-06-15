@@ -2,10 +2,12 @@ object Modules {
 
     val mobileFeatures: Set<String>
         get() = setOf(
+            launchFeature,
             splashFeature
         )
 
     // Features
+    const val launchFeature = ":launch-feature"
     const val splashFeature = ":splash-feature"
 
     const val sharedInterfaces = ":shared-interfaces"
