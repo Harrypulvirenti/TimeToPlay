@@ -22,6 +22,8 @@ dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
 
+    implementation(Libraries.navigationFragment)
+
     // Coroutine
     coroutines()
 

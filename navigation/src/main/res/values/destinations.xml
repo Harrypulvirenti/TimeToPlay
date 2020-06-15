@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    These resources file it's the place where you should declare public navigable destinations inside the app
+    -->
+
+    <item name="splashFragment" type="id" />
+    <item name="homeFragment" type="id" />
+
+</resources>

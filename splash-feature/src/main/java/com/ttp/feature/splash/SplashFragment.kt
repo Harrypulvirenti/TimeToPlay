@@ -8,11 +8,9 @@ import com.ttp.core.utils.SmartLogger
 import com.ttp.feature.splash.viewmodel.SplashViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-internal class SplashFragment : BaseFragment() {
+internal class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
     private val viewModel: SplashViewModel by viewModel()
-
-    override fun getLayoutId(): Int = R.layout.fragment_splash
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -12,6 +12,7 @@ internal object Versions {
     const val appCompat = "1.2.0-rc01"
     const val fragment = "1.2.4"
     const val lifecycle = "2.3.0-alpha03"
+    const val navigation = "2.3.0-rc01"
     const val lifecycleTest = "2.1.0"
     const val koin = "2.1.5"
     const val retrofit = "2.9.0"

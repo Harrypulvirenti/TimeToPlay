@@ -33,6 +33,11 @@ fun DependencyHandlerScope.lifecycle() {
     kapt(Libraries.lifecycleCompiler)
 }
 
+fun DependencyHandlerScope.navigation() {
+    implementation(Libraries.navigationFragment)
+    implementation(Libraries.navigationUI)
+}
+
 fun DependencyHandlerScope.coroutines() {
     implementation(Libraries.coroutinesCore)
     implementation(Libraries.coroutinesAndroid)
@@ -68,9 +73,9 @@ fun DependencyHandlerScope.featureBaseDependencies() {
         Modules.navigation
     )
 
-
     androidSupport()
     lifecycle()
+    navigation()
     koin()
     coroutines()
 

@@ -28,6 +28,10 @@ object Libraries {
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
 
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+
     // Koin
     const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
     const val koinScope = "org.koin:koin-androidx-scope:${Versions.koin}"
