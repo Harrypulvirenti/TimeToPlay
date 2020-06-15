@@ -14,4 +14,7 @@ dependencies {
 
     // Coroutine
     implementation(Libraries.coroutinesCore)
+
+    // Koin
+    implementation(Libraries.koinAndroid)
 }
