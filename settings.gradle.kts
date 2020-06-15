@@ -11,5 +11,6 @@ include(
     ":core",
     ":navigation",
     ":launch-feature",
-    ":splash-feature"
+    ":splash-feature",
+    ":home-feature"
 )
