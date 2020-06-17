@@ -8,6 +8,7 @@ include(
     ":test-implementation",
     ":entities",
     ":network",
+    ":data-sources",
     ":core",
     ":navigation",
     ":launch-feature",

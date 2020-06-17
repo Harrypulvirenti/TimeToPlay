@@ -1,6 +1,7 @@
 import extensions.applyAndroidDefault
 import extensions.commonBaseDependencies
 import extensions.featureBaseDependencies
+import extensions.implementationProject
 
 plugins {
     id(GradlePlugins.androidLibrary)
@@ -14,4 +15,6 @@ applyAndroidDefault()
 dependencies {
     commonBaseDependencies()
     featureBaseDependencies()
+
+    implementationProject(Modules.dataSources)
 }

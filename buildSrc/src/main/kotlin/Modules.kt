@@ -18,6 +18,7 @@ object Modules {
     const val androidExtensions = ":extensions-android"
     const val entities = ":entities"
     const val network = ":network"
+    const val dataSources = ":data-sources"
     const val core = ":core"
     const val navigation = ":navigation"
 }
