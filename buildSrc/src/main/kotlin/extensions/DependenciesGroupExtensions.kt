@@ -79,6 +79,8 @@ fun DependencyHandlerScope.featureBaseDependencies() {
     koin()
     coroutines()
 
+    implementation(Libraries.logger)
+
     testImplementationProject(Modules.testImplementation)
     testingCommon()
     testImplementation(TestLibraries.lifecycleTest)

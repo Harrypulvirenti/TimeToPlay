@@ -1,6 +1,7 @@
 package com.ttp.network.calladapter
 
 import arrow.core.Either
+import com.orhanobut.logger.Logger
 import okhttp3.Request
 import okio.Timeout
 import retrofit2.Call
@@ -25,8 +26,10 @@ internal class CoroutinesCall<T : Any>(
                 }
             }
 
-            override fun onFailure(call: Call<T>, throwable: Throwable) =
+            override fun onFailure(call: Call<T>, throwable: Throwable) {
                 callback.notifyResult(Either.left(throwable))
+                Logger.e(throwable.message.orEmpty(), throwable)
+            }
         })
 
     override fun execute(): Response<Either<Throwable, T>> {

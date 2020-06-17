@@ -36,6 +36,9 @@ dependencies {
     // Koin
     implementation(Libraries.koinAndroid)
 
+    // Logger
+    implementation(Libraries.logger)
+
     testingCommon()
     testImplementation(TestLibraries.koTestArrow)
     testImplementation(TestLibraries.retrofitMockWebServer)
