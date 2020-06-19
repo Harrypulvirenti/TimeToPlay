@@ -1,4 +1,5 @@
 import extensions.applyAndroidDefault
+import extensions.arrow
 import extensions.commonBaseDependencies
 import extensions.featureBaseDependencies
 import extensions.implementationProject
@@ -16,5 +17,14 @@ dependencies {
     commonBaseDependencies()
     featureBaseDependencies()
 
-    implementationProject(Modules.dataSources)
+    implementation(Libraries.viewPager)
+    implementation(Libraries.coilImageLoader)
+
+    // Arrow
+    arrow()
+
+    implementationProject(
+        Modules.dataSources,
+        Modules.entities
+    )
 }

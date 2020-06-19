@@ -4,6 +4,7 @@
     <!--Margins-->
     <dimen name="material_margin_single">8dp</dimen>
     <dimen name="material_margin_double">16dp</dimen>
+    <dimen name="material_margin_triple">24dp</dimen>
     <dimen name="material_margin_quintuple">40dp</dimen>
 
 </resources>

@@ -19,6 +19,7 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val viewPager = "androidx.viewpager2:viewpager2:${Versions.viewPager}"
 
     // Lifecycle
     const val lifecycleViewModel =
@@ -47,6 +48,8 @@ object Libraries {
 
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+
+    const val coilImageLoader = "io.coil-kt:coil:${Versions.coilImageLoader}"
 
     // Logger
     const val logger = "com.orhanobut:logger:${Versions.logger}"

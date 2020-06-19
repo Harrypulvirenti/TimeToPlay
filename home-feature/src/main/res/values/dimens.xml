@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="carousel_game_image_corner">@dimen/material_margin_double</dimen>
+
+    <dimen name="carousel_page_margin">@dimen/material_margin_triple</dimen>
+</resources>
