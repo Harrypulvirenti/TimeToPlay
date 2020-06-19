@@ -9,15 +9,20 @@
     <ImageView
         android:id="@+id/game_pager_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
-        app:layout_constraintDimensionRatio="W,16:9"
+        app:layout_constraintDimensionRatio="H,16:10"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/glossy_gradient_bg" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/glossy_gradient_bg"
+        app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/game_pager_background" />
 
     <TextView
         android:id="@+id/game_pager_name"
@@ -29,7 +34,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
