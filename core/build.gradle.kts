@@ -21,6 +21,9 @@ dependencies {
 
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
+    implementation(Libraries.coreKtx)
+    implementation(Libraries.lifecycleRuntime)
+    implementation(Libraries.lifecycleJava8)
 
     implementation(Libraries.navigationFragment)
 
