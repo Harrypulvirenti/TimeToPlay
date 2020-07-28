@@ -63,7 +63,7 @@ private class AttachableView(
     view: View
 ) {
 
-    private val viewWeak = WeakReference(view)
+    internal val viewWeak = WeakReference(view)
 
     private val observer = object : DefaultLifecycleObserver {
         override fun onDestroy(owner: LifecycleOwner) {
@@ -74,7 +74,7 @@ private class AttachableView(
         }
     }
 
-    private val detachListener = object : View.OnAttachStateChangeListener {
+    internal val detachListener = object : View.OnAttachStateChangeListener {
 
         override fun onViewDetachedFromWindow(v: View) {
             v.viewScope.coroutineContext.cancelChildren()

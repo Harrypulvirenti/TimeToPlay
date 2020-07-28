@@ -57,6 +57,11 @@ fun DependencyHandlerScope.moshi() {
     kapt(Libraries.moshiCodegen)
 }
 
+fun DependencyHandlerScope.exoPlayer() {
+    implementation(Libraries.exoPlayerCore)
+    implementation(Libraries.exoPlayerUI)
+}
+
 fun DependencyHandlerScope.testingCommon() {
     testImplementation(TestLibraries.junit)
     testImplementation(TestLibraries.mockk)

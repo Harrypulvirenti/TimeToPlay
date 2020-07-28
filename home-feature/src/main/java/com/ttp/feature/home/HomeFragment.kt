@@ -3,8 +3,10 @@ package com.ttp.feature.home
 import android.os.Bundle
 import android.view.View
 import androidx.viewpager2.widget.MarginPageTransformer
+import androidx.viewpager2.widget.ViewPager2
 import com.ttp.core.base.BaseFragment
 import com.ttp.extensions.android.observe
+import com.ttp.extensions.kotlin.lazyFast
 import com.ttp.feature.home.adapter.GameAdapter
 import com.ttp.feature.home.di.homeModules
 import com.ttp.feature.home.viewmodel.HomeViewModel
@@ -14,9 +16,15 @@ import org.koin.core.module.Module
 
 internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
-    private val viewModel: HomeViewModel by viewModel()
+    internal val viewModel: HomeViewModel by viewModel()
 
-    private val gameAdapter = GameAdapter()
+    private val gameAdapter by lazyFast { GameAdapter(requireContext(), viewModel.playerController) }
+
+    private val pageChangeListener = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            viewModel.onGamePageSelected(position)
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,7 +49,13 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
             offscreenPageLimit = 3
 
             setPageTransformer(MarginPageTransformer(resources.getDimensionPixelSize(R.dimen.carousel_page_margin)))
+            registerOnPageChangeCallback(pageChangeListener)
         }
+    }
+
+    override fun onDestroyView() {
+        gameViewPager.unregisterOnPageChangeCallback(pageChangeListener)
+        super.onDestroyView()
     }
 
     override fun getKoinModules(): List<Module> = homeModules

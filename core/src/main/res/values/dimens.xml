@@ -7,4 +7,9 @@
     <dimen name="material_margin_triple">24dp</dimen>
     <dimen name="material_margin_quintuple">40dp</dimen>
 
+    <!--Text sizes-->
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+
 </resources>

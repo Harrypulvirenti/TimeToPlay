@@ -7,17 +7,21 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import coil.transform.RoundedCornersTransformation
+import com.google.android.exoplayer2.ExoPlayer
 import com.ttp.entities.Game
 import com.ttp.extensions.android.getDimensionPixelSize
 import com.ttp.feature.home.R
+import com.ttp.feature.home.ui.CarouselPlayerView
 import com.ttp.feature.home.utils.LinearGradientTransformation
+import kotlinx.coroutines.flow.Flow
 
 internal class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val background: ImageView = view.findViewById(R.id.game_pager_background)
+    private val playerView: CarouselPlayerView = view.findViewById(R.id.game_pager_player)
     private val name: TextView = view.findViewById(R.id.game_pager_name)
 
-    fun bindView(data: Game) {
+    fun bindView(data: Game, player: ExoPlayer, playerController: Flow<Long>) {
 
         background.load(data.background) {
             transformations(
@@ -29,5 +33,7 @@ internal class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         }
 
         name.text = data.name
+
+        playerView.bind(data, player, playerController)
     }
 }

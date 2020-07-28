@@ -15,15 +15,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
+
+    <com.ttp.feature.home.ui.CarouselPlayerView
+        android:id="@+id/game_pager_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
+        app:layout_constraintEnd_toEndOf="@id/game_pager_background"
+        app:layout_constraintStart_toStartOf="@id/game_pager_background"
+        app:layout_constraintTop_toTopOf="@id/game_pager_background" />
+
     <TextView
         android:id="@+id/game_pager_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:layout_marginStart="@dimen/carousel_game_page_text_horizontal_margin"
+        android:layout_marginEnd="@dimen/carousel_game_page_text_horizontal_margin"
+        android:layout_marginBottom="@dimen/carousel_game_page_text_bottom_margin"
+        android:textColor="@color/carousel_game_page_text_color"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/carousel_game_page_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
         app:layout_constraintEnd_toEndOf="parent"

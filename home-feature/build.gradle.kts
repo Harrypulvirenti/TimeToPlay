@@ -1,6 +1,7 @@
 import extensions.applyAndroidDefault
 import extensions.arrow
 import extensions.commonBaseDependencies
+import extensions.exoPlayer
 import extensions.featureBaseDependencies
 import extensions.implementationProject
 
@@ -19,6 +20,8 @@ dependencies {
 
     implementation(Libraries.viewPager)
     implementation(Libraries.coilImageLoader)
+
+    exoPlayer()
 
     // Arrow
     arrow()

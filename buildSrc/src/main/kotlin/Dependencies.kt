@@ -54,6 +54,9 @@ object Libraries {
 
     const val coilImageLoader = "io.coil-kt:coil:${Versions.coilImageLoader}"
 
+    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
+    const val exoPlayerUI = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoPlayer}"
+
     // Logger
     const val logger = "com.orhanobut:logger:${Versions.logger}"
 }
