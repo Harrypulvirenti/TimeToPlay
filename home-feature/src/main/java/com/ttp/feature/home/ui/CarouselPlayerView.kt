@@ -27,6 +27,8 @@ internal class CarouselPlayerView @JvmOverloads constructor(
 
     private val playerVew: PlayerView
 
+    private var data: Game? = null
+
     init {
         isVisible = false
         inflate(R.layout.view_carousel_player, true)
@@ -35,14 +37,17 @@ internal class CarouselPlayerView @JvmOverloads constructor(
         playerVew.clipToOutline = true
     }
 
-    fun bind(data: Game, player: ExoPlayer, playerController: Flow<Long>) {
+    fun bind(data: Game) {
+        this.data = data
+    }
 
+    fun initPlayer(player: ExoPlayer, playerController: Flow<Long>) {
         viewScope.launchWhenAttached {
             playerController
-                .map { it == data.id }
+                .map { it == data?.id }
                 .collect {
                     if (it) {
-                        startPlaying(data.clip, player)
+                        startPlaying(data?.clip, player)
                     } else {
                         stopPlaying()
                     }
@@ -50,9 +55,9 @@ internal class CarouselPlayerView @JvmOverloads constructor(
         }
     }
 
-    private suspend fun startPlaying(url: String, player: ExoPlayer) {
+    private suspend fun startPlaying(url: String?, player: ExoPlayer) {
         playerVew.player = player
-        player.prepare(url.toMediaSource())
+        url?.toMediaSource()?.let(player::prepare)
         delay(PLAYBACK_DELAY_TIME)
         isVisible = true
         player.play()

@@ -21,7 +21,7 @@ internal class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val playerView: CarouselPlayerView = view.findViewById(R.id.game_pager_player)
     private val name: TextView = view.findViewById(R.id.game_pager_name)
 
-    fun bindView(data: Game, player: ExoPlayer, playerController: Flow<Long>) {
+    fun bindView(data: Game) {
 
         background.load(data.background) {
             transformations(
@@ -34,6 +34,10 @@ internal class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         name.text = data.name
 
-        playerView.bind(data, player, playerController)
+        playerView.bind(data)
+    }
+
+    fun attachView(player: ExoPlayer, playerController: Flow<Long>) {
+        playerView.initPlayer(player, playerController)
     }
 }

@@ -24,5 +24,10 @@ internal class GameAdapter(
         GameViewHolder(parent.inflate(R.layout.viewpager_game_page))
 
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) =
-        holder.bindView(getItem(position), exoPlayer, playerController)
+        holder.bindView(getItem(position))
+
+    override fun onViewAttachedToWindow(holder: GameViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        holder.attachView(exoPlayer, playerController)
+    }
 }

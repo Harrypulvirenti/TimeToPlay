@@ -26,10 +26,8 @@ internal class HomeViewModel(
         get() = _state
 
     fun onGamePageSelected(position: Int) {
-        viewModelScope.launch {
-            _state.value.getOrNull(position)?.let {
-                _playerController.send(it.id)
-            }
+        _state.value.getOrNull(position)?.let {
+            _playerController.offer(it.id)
         }
     }
 
