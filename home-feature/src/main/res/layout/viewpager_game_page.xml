@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/material_margin_double">
+
+    <ImageView
+        android:id="@+id/game_pager_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="H,16:10"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <com.ttp.feature.home.ui.CarouselPlayerView
+        android:id="@+id/game_pager_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
+        app:layout_constraintEnd_toEndOf="@id/game_pager_background"
+        app:layout_constraintStart_toStartOf="@id/game_pager_background"
+        app:layout_constraintTop_toTopOf="@id/game_pager_background" />
+
+    <TextView
+        android:id="@+id/game_pager_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/carousel_game_page_text_horizontal_margin"
+        android:layout_marginEnd="@dimen/carousel_game_page_text_horizontal_margin"
+        android:layout_marginBottom="@dimen/carousel_game_page_text_bottom_margin"
+        android:textColor="@color/carousel_game_page_text_color"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/carousel_game_page_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/game_pager_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Spider-Man" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

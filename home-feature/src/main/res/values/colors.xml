@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="carousel_game_page_text_color">@color/white</color>
+    <color name="carousel_game_page_player_overlay_start">@color/black</color>
+    <color name="carousel_game_page_player_overlay_center">#80000000</color>
+    <color name="carousel_game_page_player_overlay_end">@android:color/transparent</color>
+
+</resources>

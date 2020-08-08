@@ -19,6 +19,8 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val viewPager = "androidx.viewpager2:viewpager2:${Versions.viewPager}"
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
 
     // Lifecycle
     const val lifecycleViewModel =
@@ -27,7 +29,9 @@ object Libraries {
     const val lifecycleSavedState =
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    const val lifecycleJava8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
 
+    // Navigation
     const val navigationFragment =
         "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
@@ -47,6 +51,11 @@ object Libraries {
 
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+
+    const val coilImageLoader = "io.coil-kt:coil:${Versions.coilImageLoader}"
+
+    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
+    const val exoPlayerUI = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoPlayer}"
 
     // Logger
     const val logger = "com.orhanobut:logger:${Versions.logger}"

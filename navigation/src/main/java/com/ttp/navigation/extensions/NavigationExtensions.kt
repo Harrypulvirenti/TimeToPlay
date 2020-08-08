@@ -38,3 +38,5 @@ fun Fragment.navigate(
     navigatorExtras: Navigator.Extras
 ) = findNavController().navigate(directions, navigatorExtras)
 
+fun withNavOptions(configuration: NavOptions.Builder.() -> Unit): NavOptions =
+    NavOptions.Builder().apply(configuration).build()

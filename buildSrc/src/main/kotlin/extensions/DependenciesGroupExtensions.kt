@@ -18,6 +18,7 @@ fun DependencyHandlerScope.androidSupport() {
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
     implementation(Libraries.constraintLayout)
+    implementation(Libraries.coreKtx)
 }
 
 fun DependencyHandlerScope.arrow() {
@@ -30,6 +31,7 @@ fun DependencyHandlerScope.lifecycle() {
     implementation(Libraries.lifecycleViewModel)
     implementation(Libraries.lifecycleRuntime)
     implementation(Libraries.lifecycleSavedState)
+    implementation(Libraries.lifecycleJava8)
     kapt(Libraries.lifecycleCompiler)
 }
 
@@ -53,6 +55,11 @@ fun DependencyHandlerScope.koin() {
 fun DependencyHandlerScope.moshi() {
     implementation(Libraries.moshi)
     kapt(Libraries.moshiCodegen)
+}
+
+fun DependencyHandlerScope.exoPlayer() {
+    implementation(Libraries.exoPlayerCore)
+    implementation(Libraries.exoPlayerUI)
 }
 
 fun DependencyHandlerScope.testingCommon() {

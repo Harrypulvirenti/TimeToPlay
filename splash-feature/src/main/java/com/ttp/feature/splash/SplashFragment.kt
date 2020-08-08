@@ -7,6 +7,7 @@ import com.ttp.core.extensions.observeEvent
 import com.ttp.feature.splash.di.splashModule
 import com.ttp.feature.splash.viewmodel.SplashViewModel
 import com.ttp.navigation.extensions.navigate
+import com.ttp.navigation.extensions.withNavOptions
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.module.Module
 
@@ -18,7 +19,10 @@ internal class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         super.onViewCreated(view, savedInstanceState)
 
         observeEvent(viewModel.navigationEvent) {
-            navigate(R.id.splashToHome)
+            navigate(
+                resId = R.id.splashToHome,
+                navOptions = withNavOptions { setPopUpTo(R.id.splashFragment, true) }
+            )
         }
     }
 
