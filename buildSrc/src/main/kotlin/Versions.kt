@@ -1,7 +1,7 @@
 internal object Versions {
 
     // BuildPlugins
-    const val kotlin = "1.3.72"
+    const val kotlin = "1.4.0"
     const val androidBuildTools = "4.0.1"
     const val ktlint = "9.2.1"
     const val versions = "0.28.0"
@@ -16,7 +16,7 @@ internal object Versions {
     const val lifecycle = "2.3.0-alpha03"
     const val navigation = "2.3.0-rc01"
     const val lifecycleTest = "2.1.0"
-    const val koin = "2.1.5"
+    const val koin = "2.1.6"
     const val retrofit = "2.9.0"
     const val retrofitInterceptor = "4.7.2"
     const val retrofitMockWebServer = "4.7.2"

@@ -14,7 +14,7 @@ fun Application.initKoin(isDebug: Boolean = false, modules: List<Module> = empty
 
     startKoin {
         if (isDebug) {
-            androidLogger(Level.DEBUG)
+            androidLogger(Level.ERROR)
         }
         androidContext(this@initKoin)
 
