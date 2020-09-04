@@ -52,11 +52,6 @@ fun DependencyHandlerScope.koin() {
     implementation(Libraries.koinExperimental)
 }
 
-fun DependencyHandlerScope.moshi() {
-    implementation(Libraries.moshi)
-    kapt(Libraries.moshiCodegen)
-}
-
 fun DependencyHandlerScope.exoPlayer() {
     implementation(Libraries.exoPlayerCore)
     implementation(Libraries.exoPlayerUI)
