@@ -2,7 +2,6 @@ import extensions.applyAndroidDefault
 import extensions.arrow
 import extensions.commonBaseDependencies
 import extensions.implementationProject
-import extensions.moshi
 import extensions.testImplementationProject
 import extensions.testingCommon
 
@@ -11,6 +10,7 @@ plugins {
     id(GradlePlugins.kotlinAndroid)
     id(GradlePlugins.kotlinAndroidExtensions)
     id(GradlePlugins.kotlinKapt)
+    id(GradlePlugins.kotlinSerialization)
 }
 
 applyAndroidDefault()
@@ -33,7 +33,7 @@ dependencies {
     //    Retrofit 2
     implementation(Libraries.retrofit)
 
-    moshi()
+    implementation(Libraries.kotlinSerialization)
 
     // Koin
     implementation(Libraries.koinAndroid)

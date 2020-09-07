@@ -16,6 +16,7 @@ buildscript {
     dependencies {
         classpath(Classpath.androidBuildTools)
         classpath(Classpath.kotlin)
+        classpath(Classpath.kotlinSerialization)
         classpath(Classpath.ktlint)
         classpath(Classpath.versions)
     }

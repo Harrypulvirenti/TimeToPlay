@@ -7,6 +7,7 @@ object GradlePlugins {
     const val kotlinAndroid = "kotlin-android"
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val kotlinKapt = "kotlin-kapt"
+    const val kotlinSerialization = "kotlinx-serialization"
     const val versions = "com.github.ben-manes.versions"
     const val ktlint = "org.jlleitschuh.gradle.ktlint"
     const val ktlintIdea = "org.jlleitschuh.gradle.ktlint-idea"

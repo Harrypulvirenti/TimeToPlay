@@ -44,13 +44,12 @@ object Libraries {
 
     //         Retrofit 2
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
-
     const val retrofitInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.retrofitInterceptor}"
-
-    const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
-    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+    const val kotlinSerialization =
+        "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinSerialization}"
+    const val kotlinSerializationConverter =
+        "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.kotlinSerializationConverter}"
 
     const val coilImageLoader = "io.coil-kt:coil:${Versions.coilImageLoader}"
 

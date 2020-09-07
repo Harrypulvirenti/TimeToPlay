@@ -28,10 +28,10 @@ dependencies {
 
     //    Retrofit 2
     implementation(Libraries.retrofit)
-    implementation(Libraries.retrofitMoshiConverter)
     implementation(Libraries.retrofitInterceptor)
 
-    implementation(Libraries.moshi)
+    implementation(Libraries.kotlinSerialization)
+    implementation(Libraries.kotlinSerializationConverter)
 
     // Koin
     implementation(Libraries.koinAndroid)

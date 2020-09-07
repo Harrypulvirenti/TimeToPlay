@@ -1,35 +1,35 @@
 package com.ttp.datasources.game.models
 
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class GameListResponse(
-    val count: Long?,
-    val next: String?,
-    val previous: String?,
-    val results: List<GameResponse>?
+    val count: Long? = null,
+    val next: String? = null,
+    val previous: String? = null,
+    val results: List<GameResponse> = emptyList()
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class GameResponse(
-    val id: Long?,
-    val name: String?,
-    val background_image: String?,
-    val rating: Double?,
-    val rating_top: Int?,
-    val ratings_count: Int?,
-    val metacritic: Int?,
-    val clip: ClipResponse?,
-    val short_screenshots: List<ScreenShotResponse>?
+    val id: Long = -1,
+    val name: String = "",
+    val background_image: String = "",
+    val rating: Double = 0.0,
+    val rating_top: Int = 5,
+    val ratings_count: Int? = null,
+    val metacritic: Int = 0,
+    val clip: ClipResponse = ClipResponse(),
+    val short_screenshots: List<ScreenShotResponse> = emptyList()
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class ClipResponse(
-    val clip: String?
+    val clip: String = ""
 )
 
-@JsonClass(generateAdapter = true)
+@Serializable
 internal data class ScreenShotResponse(
-    val id: Long?,
-    val image: String?
+    val id: Long = -1,
+    val image: String = ""
 )
