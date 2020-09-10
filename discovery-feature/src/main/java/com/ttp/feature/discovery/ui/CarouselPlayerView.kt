@@ -1,4 +1,4 @@
-package com.ttp.feature.home.ui
+package com.ttp.feature.discovery.ui
 
 import android.content.Context
 import android.util.AttributeSet
@@ -9,9 +9,9 @@ import com.google.android.exoplayer2.ui.PlayerView
 import com.ttp.core.coroutines.viewScope
 import com.ttp.entities.Game
 import com.ttp.extensions.android.inflate
-import com.ttp.feature.home.R
-import com.ttp.feature.home.extensions.play
-import com.ttp.feature.home.extensions.toMediaSource
+import com.ttp.feature.discovery.R
+import com.ttp.feature.discovery.extensions.play
+import com.ttp.feature.discovery.extensions.toMediaSource
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect

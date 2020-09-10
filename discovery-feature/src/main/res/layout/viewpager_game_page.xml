@@ -16,7 +16,7 @@
         tools:ignore="ContentDescription" />
 
 
-    <com.ttp.feature.home.ui.CarouselPlayerView
+    <com.ttp.feature.discovery.ui.CarouselPlayerView
         android:id="@+id/game_pager_player"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -1,4 +1,4 @@
-package com.ttp.feature.home.adapter
+package com.ttp.feature.discovery.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.ttp.entities.Game

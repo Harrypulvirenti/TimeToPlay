@@ -21,6 +21,7 @@ object Libraries {
     const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
     const val viewPager = "androidx.viewpager2:viewpager2:${Versions.viewPager}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val material = "com.google.android.material:material:${Versions.material}"
 
     // Lifecycle
     const val lifecycleViewModel =

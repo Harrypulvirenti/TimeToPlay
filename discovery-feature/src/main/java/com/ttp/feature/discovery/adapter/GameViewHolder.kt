@@ -1,4 +1,4 @@
-package com.ttp.feature.home.adapter
+package com.ttp.feature.discovery.adapter
 
 import android.graphics.Color
 import android.view.View
@@ -10,9 +10,9 @@ import coil.transform.RoundedCornersTransformation
 import com.google.android.exoplayer2.ExoPlayer
 import com.ttp.entities.Game
 import com.ttp.extensions.android.getDimensionPixelSize
-import com.ttp.feature.home.R
-import com.ttp.feature.home.ui.CarouselPlayerView
-import com.ttp.feature.home.utils.LinearGradientTransformation
+import com.ttp.feature.discovery.R
+import com.ttp.feature.discovery.ui.CarouselPlayerView
+import com.ttp.feature.discovery.utils.LinearGradientTransformation
 import kotlinx.coroutines.flow.Flow
 
 internal class GameViewHolder(view: View) : RecyclerView.ViewHolder(view) {
