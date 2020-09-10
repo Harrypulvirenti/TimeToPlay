@@ -13,5 +13,8 @@ include(
     ":navigation",
     ":launch-feature",
     ":splash-feature",
-    ":home-feature"
+    ":home-feature",
+    ":discovery-feature",
+    ":collection-feature",
+    ":profile-feature"
 )
