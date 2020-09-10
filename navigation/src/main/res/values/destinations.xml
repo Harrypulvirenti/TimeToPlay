@@ -7,5 +7,8 @@
 
     <item name="splashFragment" type="id" />
     <item name="homeFragment" type="id" />
+    <item name="discoveryFragment" type="id" />
+    <item name="collectionFragment" type="id" />
+    <item name="profileFragment" type="id" />
 
 </resources>

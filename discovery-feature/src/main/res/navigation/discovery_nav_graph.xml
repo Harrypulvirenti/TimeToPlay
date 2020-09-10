@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discovery_nav_graph"
+    app:startDestination="@id/discoveryFragment"
+    tools:ignore="MissingDefaultResource,UnusedNavigation">
+
+
+    <fragment
+        android:id="@id/discoveryFragment"
+        android:name="com.ttp.feature.discovery.DiscoveryFragment"
+        android:label="DiscoveryFragment"
+        tools:layout="@layout/fragment_discovery" />
+
+</navigation>

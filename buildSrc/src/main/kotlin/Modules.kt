@@ -4,13 +4,19 @@ object Modules {
         get() = setOf(
             launchFeature,
             splashFeature,
-            homeFeature
+            homeFeature,
+            discoveryFeature,
+            collectionFeature,
+            profileFeature
         )
 
     // Features
     const val launchFeature = ":launch-feature"
     const val splashFeature = ":splash-feature"
     const val homeFeature = ":home-feature"
+    const val discoveryFeature = ":discovery-feature"
+    const val collectionFeature = ":collection-feature"
+    const val profileFeature = ":profile-feature"
 
     const val sharedInterfaces = ":shared-interfaces"
     const val testImplementation = ":test-implementation"
