@@ -35,7 +35,7 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     override fun onBackPressed(): Boolean {
-        return childNavController.navigateUp().also {
+        return childNavController.popBackStack().also {
             updateBottomViewPosition(childNavController.currentDestination)
         }
     }
