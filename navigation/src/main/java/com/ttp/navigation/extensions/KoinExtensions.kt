@@ -3,13 +3,23 @@ package com.ttp.navigation.extensions
 import androidx.annotation.NavigationRes
 import androidx.navigation.NavGraph
 import androidx.navigation.NavInflater
-import org.koin.core.definition.BeanDefinition
+import com.ttp.navigation.MainNavigation
+import com.ttp.navigation.GraphContributor
+import org.koin.core.Koin
 import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.bind
+import kotlin.reflect.typeOf
 
-fun Module.navGraph(@NavigationRes graphResId: Int): BeanDefinition<NavGraph> =
+fun Module.mainGraphContributor(@NavigationRes graphResId: Int) =
+    subGraphContributor<MainNavigation>(graphResId)
+
+@OptIn(ExperimentalStdlibApi::class)
+inline fun <reified T : GraphContributor> Module.subGraphContributor(@NavigationRes graphResId: Int) =
     factory(named(graphResId.toString())) {
         val inflater: NavInflater = get()
-        inflater.inflate(graphResId)
-    } bind NavGraph::class
+        Pair(T::class, inflater.inflate(graphResId))
+    } bind typeOf<Pair<T, NavGraph>>()::class
+
+inline fun <reified T : GraphContributor> Koin.getGraphContributors(): List<NavGraph> =
+    getAll<Pair<T, NavGraph>>().map { it.second }

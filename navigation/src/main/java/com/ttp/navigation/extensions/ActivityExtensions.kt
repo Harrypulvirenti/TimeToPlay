@@ -3,28 +3,24 @@ package com.ttp.navigation.extensions
 import androidx.annotation.NavigationRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
+import com.ttp.navigation.MainNavigation
 import org.koin.android.ext.android.getKoin
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
 
-fun AppCompatActivity.setupNavigation(
+fun AppCompatActivity.setupMainGraph(
     navController: NavController,
     @NavigationRes mainGraphId: Int
 ) {
     loadInflaterModule(navController)
 
-    val mainGraph = navController.navInflater.inflate(mainGraphId)
-
-    injectSubGraphs(mainGraph)
-
-    navController.graph = mainGraph
+    navController.setupContributors(
+        mainGraphId,
+        getKoin().getGraphContributors<MainNavigation>()
+    )
 }
 
 private fun loadInflaterModule(navController: NavController) =
     loadKoinModules(module {
-        single { navController.navInflater }
+        single(override = true) { navController.navInflater }
     })
-
-private fun AppCompatActivity.injectSubGraphs(mainGraph: NavGraph) =
-    getKoin().getAll<NavGraph>().forEach(mainGraph::addAll)

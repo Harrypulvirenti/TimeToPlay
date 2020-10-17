@@ -16,6 +16,7 @@ dependencies {
 
     implementationProject(
         Modules.core,
+        Modules.kotlinExtensions,
         Modules.navigation
     )
 

@@ -3,7 +3,7 @@
 
     <color name="colorPrimary">#323133</color>
     <color name="colorPrimaryDark">#323133</color>
-    <color name="colorAccent">#BF263C</color>
+    <color name="colorAccent">#fc5c65</color>
 
     <color name="black">@android:color/black</color>
     <color name="white">@android:color/white</color>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_internal_navigation"
+    app:startDestination="@id/discoveryFragment"
+    tools:ignore="InvalidNavigation,MissingDefaultResource,UnusedNavigation">
+
+
+    <action
+        android:id="@id/toDiscoveryFragment"
+        app:destination="@id/discoveryFragment" />
+
+    <action
+        android:id="@id/toCollectionFragment"
+        app:destination="@id/collectionFragment" />
+
+    <action
+        android:id="@id/toProfileFragment"
+        app:destination="@id/profileFragment" />
+
+</navigation>

@@ -1,9 +1,10 @@
 package com.ttp.feature.profile.di
 
 import com.ttp.feature.profile.R
-import com.ttp.navigation.extensions.navGraph
+import com.ttp.navigation.HomeBottomNavigation
+import com.ttp.navigation.extensions.subGraphContributor
 import org.koin.dsl.module
 
 val profileNavigationModule = module {
-    navGraph(R.navigation.profile_nav_graph)
+    subGraphContributor<HomeBottomNavigation>(R.navigation.profile_nav_graph)
 }

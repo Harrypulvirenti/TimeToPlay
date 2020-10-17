@@ -16,7 +16,6 @@ internal class CoroutinesCall<T : Any>(
     override fun enqueue(callback: Callback<Either<Throwable, T>>) =
         proxyCall.enqueue(object : Callback<T> {
             override fun onResponse(call: Call<T>, response: Response<T>) {
-
                 with(response) {
                     if (isSuccessful && body() != null) {
                         callback.notifyResult(Either.right(body()!!))

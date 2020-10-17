@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bottom_menu_discovery_section">Discovery</string>
+    <string name="bottom_menu_collection_section">Collection</string>
+    <string name="bottom_menu_profile_section">Profile</string>
+</resources>
