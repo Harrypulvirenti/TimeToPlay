@@ -20,7 +20,7 @@ Some examples:
 *  [Koin](https://github.com/InsertKoinIO/koin) (Dependency Injection)
 *  [Arrow](https://arrow-kt.io/) (Functional Programming)
 *  [Room](https://developer.android.com/topic/libraries/architecture/room) (Database)
-*  [Firebase Firestone](https://firebase.google.com/products/firestore/) (Remote Database)
+*  [Firebase Firestore](https://firebase.google.com/products/firestore/) (Remote Database)
 *  [Mockk](https://mockk.io/) (Mocking Library)
 *  [KoTest](https://github.com/kotest/kotest) (Test Framework)
 
