@@ -51,7 +51,7 @@ private fun BaseExtension.applyLint(project: Project) {
 
 private fun BaseExtension.applyTestOptions() {
     testOptions {
-        unitTests.all {
+        unitTests.applyAll {
             useJUnit()
         }
     }
