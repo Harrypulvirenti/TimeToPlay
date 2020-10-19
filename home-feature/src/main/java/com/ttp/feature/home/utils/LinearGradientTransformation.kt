@@ -9,7 +9,7 @@ import android.graphics.PorterDuffXfermode
 import android.graphics.Shader.TileMode
 import androidx.annotation.ColorInt
 import androidx.core.graphics.applyCanvas
-import coil.bitmappool.BitmapPool
+import coil.bitmap.BitmapPool
 import coil.size.Size
 import coil.transform.Transformation
 import java.lang.Math.toRadians
