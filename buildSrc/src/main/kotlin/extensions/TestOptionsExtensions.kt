@@ -6,6 +6,6 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.kotlin.dsl.closureOf
 
 @Suppress("UNCHECKED_CAST")
-fun TestOptions.UnitTestOptions.all(action: Test.() -> Unit) {
+fun TestOptions.UnitTestOptions.applyAll(action: Test.() -> Unit) {
     all(closureOf(action) as Closure<Test>)
 }
