@@ -47,7 +47,7 @@ object Libraries {
     const val retrofitInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.retrofitInterceptor}"
     const val kotlinSerialization =
-        "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinSerialization}"
+        "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
     const val kotlinSerializationConverter =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.kotlinSerializationConverter}"
 

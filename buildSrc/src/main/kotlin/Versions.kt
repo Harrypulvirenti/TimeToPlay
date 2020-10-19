@@ -20,7 +20,7 @@ internal object Versions {
     const val retrofit = "2.9.0"
     const val retrofitInterceptor = "4.7.2"
     const val retrofitMockWebServer = "4.7.2"
-    const val kotlinSerialization = "1.0.0-RC"
+    const val kotlinSerialization = "1.0.0"
     const val kotlinSerializationConverter = "0.7.0"
     const val coilImageLoader = "1.0.0-rc3"
     const val exoPlayer = "2.9.6"
