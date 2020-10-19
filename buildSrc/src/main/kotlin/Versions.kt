@@ -6,7 +6,7 @@ internal object Versions {
     const val ktlint = "9.2.1"
     const val versions = "0.28.0"
 
-    const val coroutines = "1.3.7"
+    const val coroutines = "1.4.0-M1"
     const val arrow = "0.10.5"
     const val constraintLayout = "2.0.0-beta6"
     const val appCompat = "1.2.0-rc01"
