@@ -3,8 +3,8 @@ internal object Versions {
     // BuildPlugins
     const val kotlin = "1.4.10"
     const val androidBuildTools = "4.1.0"
-    const val ktlint = "9.2.1"
-    const val versions = "0.28.0"
+    const val ktlint = "9.4.1"
+    const val versions = "0.33.0"
 
     const val coroutines = "1.4.0-M1"
     const val arrow = "0.10.5"

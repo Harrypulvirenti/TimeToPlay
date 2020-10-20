@@ -39,7 +39,8 @@ internal class DiscoveryViewModel(
                     {},
                     {
                         _state.value = it
-                    })
+                    }
+                )
         }
     }
 }

@@ -21,6 +21,8 @@ fun AppCompatActivity.setupMainGraph(
 }
 
 private fun loadInflaterModule(navController: NavController) =
-    loadKoinModules(module {
-        single(override = true) { navController.navInflater }
-    })
+    loadKoinModules(
+        module {
+            single(override = true) { navController.navInflater }
+        }
+    )

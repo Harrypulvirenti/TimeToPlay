@@ -2,13 +2,13 @@ package com.ttp.network
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.ttp.network.calladapter.CoroutinesCallAdapterFactory
-import java.util.concurrent.TimeUnit
-import kotlin.reflect.KClass
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import java.util.concurrent.TimeUnit
+import kotlin.reflect.KClass
 
 private const val CONNECTION_TIMEOUT = 15L
 

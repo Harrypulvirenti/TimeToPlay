@@ -8,12 +8,12 @@ import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
 import io.kotest.matchers.types.shouldNotBeSameInstanceAs
-import java.io.IOException
 import okhttp3.ResponseBody.Companion.toResponseBody
 import org.junit.Test
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.IOException
 
 internal class CoroutinesCallTest {
 
@@ -82,15 +82,17 @@ internal class CoroutinesCallTest {
     }
 
     private fun <T : Any> CoroutinesCall<T>.enqueueAsserting(assert: Response<Either<Throwable, T>>.() -> Unit) =
-        enqueue(object : Callback<Either<Throwable, T>> {
-            override fun onResponse(
-                call: Call<Either<Throwable, T>>,
-                response: Response<Either<Throwable, T>>
-            ) {
-                response.assert()
-            }
+        enqueue(
+            object : Callback<Either<Throwable, T>> {
+                override fun onResponse(
+                    call: Call<Either<Throwable, T>>,
+                    response: Response<Either<Throwable, T>>
+                ) {
+                    response.assert()
+                }
 
-            override fun onFailure(call: Call<Either<Throwable, T>>, t: Throwable) =
-                throw IllegalStateException()
-        })
+                override fun onFailure(call: Call<Either<Throwable, T>>, t: Throwable) =
+                    throw IllegalStateException()
+            }
+        )
 }

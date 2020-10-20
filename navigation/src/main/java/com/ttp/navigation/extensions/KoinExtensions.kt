@@ -5,11 +5,11 @@ import androidx.navigation.NavGraph
 import androidx.navigation.NavInflater
 import com.ttp.navigation.GraphContributor
 import com.ttp.navigation.MainNavigation
-import kotlin.reflect.typeOf
 import org.koin.core.Koin
 import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.bind
+import kotlin.reflect.typeOf
 
 fun Module.mainGraphContributor(@NavigationRes graphResId: Int) =
     subGraphContributor<MainNavigation>(graphResId)

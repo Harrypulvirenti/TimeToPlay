@@ -1,9 +1,9 @@
 package com.ttp.network.calladapter
 
 import arrow.core.Either
-import java.lang.reflect.Type
 import retrofit2.Call
 import retrofit2.CallAdapter
+import java.lang.reflect.Type
 
 internal class CoroutinesCallAdapter<T : Any>(
     private val successType: Type
