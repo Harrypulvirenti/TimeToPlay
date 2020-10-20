@@ -8,5 +8,3 @@ plugins {
 dependencies {
     commonBaseDependencies()
 }
-
-

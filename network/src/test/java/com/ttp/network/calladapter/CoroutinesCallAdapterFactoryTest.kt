@@ -5,13 +5,13 @@ import com.ttp.network.utils.StringConverterFactory
 import com.ttp.network.utils.typeOf
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
+import java.util.concurrent.Executors
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import retrofit2.Call
 import retrofit2.Retrofit
-import java.util.concurrent.Executors
 
 internal class CoroutinesCallAdapterFactoryTest {
 

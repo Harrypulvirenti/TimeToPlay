@@ -15,7 +15,6 @@ plugins {
 
 applyAndroidDefault()
 
-
 dependencies {
     commonBaseDependencies()
 
