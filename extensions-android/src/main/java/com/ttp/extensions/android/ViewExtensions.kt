@@ -2,8 +2,8 @@ package com.ttp.extensions.android
 
 import android.view.View
 import androidx.annotation.DimenRes
-import kotlin.coroutines.resume
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlin.coroutines.resume
 
 fun View.getDimension(@DimenRes dimenRes: Int): Float =
     context.resources.getDimension(dimenRes)

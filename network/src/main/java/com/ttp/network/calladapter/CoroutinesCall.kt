@@ -14,22 +14,24 @@ internal class CoroutinesCall<T : Any>(
 ) : Call<Either<Throwable, T>> {
 
     override fun enqueue(callback: Callback<Either<Throwable, T>>) =
-        proxyCall.enqueue(object : Callback<T> {
-            override fun onResponse(call: Call<T>, response: Response<T>) {
-                with(response) {
-                    if (isSuccessful && body() != null) {
-                        callback.notifyResult(Either.right(body()!!))
-                    } else {
-                        callback.notifyResult(Either.left(HttpException(this)))
+        proxyCall.enqueue(
+            object : Callback<T> {
+                override fun onResponse(call: Call<T>, response: Response<T>) {
+                    with(response) {
+                        if (isSuccessful && body() != null) {
+                            callback.notifyResult(Either.right(body()!!))
+                        } else {
+                            callback.notifyResult(Either.left(HttpException(this)))
+                        }
                     }
                 }
-            }
 
-            override fun onFailure(call: Call<T>, throwable: Throwable) {
-                callback.notifyResult(Either.left(throwable))
-                Logger.e(throwable.message.orEmpty(), throwable)
+                override fun onFailure(call: Call<T>, throwable: Throwable) {
+                    callback.notifyResult(Either.left(throwable))
+                    Logger.e(throwable.message.orEmpty(), throwable)
+                }
             }
-        })
+        )
 
     override fun execute(): Response<Either<Throwable, T>> {
         throw UnsupportedOperationException("Coroutines call does not support synchronous execution")

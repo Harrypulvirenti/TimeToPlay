@@ -4,7 +4,6 @@ import com.ttp.network.utils.Service
 import com.ttp.network.utils.StringConverterFactory
 import io.kotest.assertions.arrow.either.shouldBeLeft
 import io.kotest.assertions.arrow.either.shouldBeRight
-import java.util.concurrent.Executors
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -14,6 +13,7 @@ import org.junit.Before
 import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.create
+import java.util.concurrent.Executors
 
 internal class ServiceTest {
 
@@ -67,9 +67,11 @@ internal class ServiceTest {
 
     @Test
     fun `Should return error result for network exception`() {
-        mockWebServer.enqueue(MockResponse().apply {
-            socketPolicy = SocketPolicy.DISCONNECT_AFTER_REQUEST
-        })
+        mockWebServer.enqueue(
+            MockResponse().apply {
+                socketPolicy = SocketPolicy.DISCONNECT_AFTER_REQUEST
+            }
+        )
 
         val response = runBlocking { service.getTextSuspend() }
 

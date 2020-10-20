@@ -45,16 +45,18 @@ subprojects {
         "com.android.build.gradle.LibraryPlugin"
     )
 
-    project.plugins.whenPluginAdded(closureOf<Any> {
-        if (this::class.qualifiedName in androidPlugins) {
-            project.android {
-                compileOptions {
-                    sourceCompatibility = VERSION_1_8
-                    targetCompatibility = VERSION_1_8
+    project.plugins.whenPluginAdded(
+        closureOf<Any> {
+            if (this::class.qualifiedName in androidPlugins) {
+                project.android {
+                    compileOptions {
+                        sourceCompatibility = VERSION_1_8
+                        targetCompatibility = VERSION_1_8
+                    }
                 }
             }
         }
-    })
+    )
 }
 
 tasks.register("clean", Delete::class) {
