@@ -1,12 +1,12 @@
 package com.ttp.network.utils
 
+import java.io.InterruptedIOException
+import java.util.concurrent.CountDownLatch
 import okhttp3.Request
 import okio.Timeout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.InterruptedIOException
-import java.util.concurrent.CountDownLatch
 
 private val DUMMY_REQUEST = Request.Builder()
     .url("http://example.com")

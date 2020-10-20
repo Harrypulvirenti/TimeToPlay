@@ -63,4 +63,3 @@ fun Fragment.navigate(
  * */
 val Fragment.currentChildFragment: Fragment?
     get() = childFragmentManager.primaryNavigationFragment
-
