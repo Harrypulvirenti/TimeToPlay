@@ -13,6 +13,7 @@ internal object Versions {
     const val fragment = "1.2.4"
     const val viewPager = "1.0.0"
     const val coreKtx = "1.3.0"
+    const val material = "1.3.0-alpha02"
     const val lifecycle = "2.3.0-alpha03"
     const val navigation = "2.3.0-rc01"
     const val lifecycleTest = "2.1.0"

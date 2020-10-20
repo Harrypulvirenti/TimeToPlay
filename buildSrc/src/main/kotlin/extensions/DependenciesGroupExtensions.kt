@@ -18,6 +18,7 @@ fun DependencyHandlerScope.androidSupport() {
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
     implementation(Libraries.constraintLayout)
+    implementation(Libraries.material)
     implementation(Libraries.coreKtx)
 }
 

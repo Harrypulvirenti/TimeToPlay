@@ -3,12 +3,30 @@ package com.ttp.navigation.extensions
 import android.net.Uri
 import android.os.Bundle
 import androidx.annotation.IdRes
+import androidx.annotation.NavigationRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigator
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.ttp.navigation.GraphContributor
+import org.koin.android.ext.android.getKoin
+
+inline fun <reified T : GraphContributor> Fragment.setupSubGraph(
+    navController: NavController,
+    @NavigationRes subGraphId: Int
+) {
+    navController.setupContributors(
+        subGraphId,
+        getKoin().getGraphContributors<T>()
+    )
+}
+
+fun Fragment.findChildNavController(@IdRes navHostFragmentId: Int): NavController =
+    (childFragmentManager.findFragmentById(navHostFragmentId) as NavHostFragment).navController
 
 fun Fragment.navigate(
     @IdRes resId: Int,
@@ -38,5 +56,11 @@ fun Fragment.navigate(
     navigatorExtras: Navigator.Extras
 ) = findNavController().navigate(directions, navigatorExtras)
 
-fun withNavOptions(configuration: NavOptions.Builder.() -> Unit): NavOptions =
-    NavOptions.Builder().apply(configuration).build()
+/**
+ * Return, if present, the current child [Fragment] displayed in the screen
+ *
+ * @return [Fragment]
+ * */
+val Fragment.currentChildFragment: Fragment?
+    get() = childFragmentManager.primaryNavigationFragment
+

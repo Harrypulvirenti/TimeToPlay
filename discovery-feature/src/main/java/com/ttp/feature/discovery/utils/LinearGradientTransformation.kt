@@ -1,4 +1,4 @@
-package com.ttp.feature.home.utils
+package com.ttp.feature.discovery.utils
 
 import android.graphics.Bitmap
 import android.graphics.Color

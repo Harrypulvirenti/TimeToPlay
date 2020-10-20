@@ -1,4 +1,4 @@
-package com.ttp.feature.home.viewmodel
+package com.ttp.feature.discovery.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.launch
 
-internal class HomeViewModel(
+internal class DiscoveryViewModel(
     private val gameDataSource: GameDataSource
 ) : ViewModel() {
 

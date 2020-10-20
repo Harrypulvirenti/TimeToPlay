@@ -1,4 +1,4 @@
-package com.ttp.feature.home.adapter
+package com.ttp.feature.discovery.adapter
 
 import android.content.Context
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.Player
 import com.ttp.entities.Game
 import com.ttp.extensions.android.inflate
-import com.ttp.feature.home.R
+import com.ttp.feature.discovery.R
 import kotlinx.coroutines.flow.Flow
 
 internal class GameAdapter(

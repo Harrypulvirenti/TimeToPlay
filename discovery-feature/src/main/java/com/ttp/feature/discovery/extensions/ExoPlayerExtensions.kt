@@ -1,4 +1,4 @@
-package com.ttp.feature.home.extensions
+package com.ttp.feature.discovery.extensions
 
 import android.net.Uri
 import com.google.android.exoplayer2.ExoPlayer

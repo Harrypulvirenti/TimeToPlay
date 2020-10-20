@@ -6,7 +6,6 @@
     app:startDestination="@id/discoveryFragment"
     tools:ignore="MissingDefaultResource,UnusedNavigation">
 
-
     <fragment
         android:id="@id/discoveryFragment"
         android:name="com.ttp.feature.discovery.DiscoveryFragment"
