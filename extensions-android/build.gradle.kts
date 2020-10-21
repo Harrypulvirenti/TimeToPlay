@@ -16,6 +16,8 @@ dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.fragment)
     implementation(Libraries.lifecycleViewModel)
+    implementation(Libraries.lifecycleRuntime)
+    implementation(Libraries.lifecycleJava8)
 
     // Coroutine
     implementation(Libraries.coroutinesCore)

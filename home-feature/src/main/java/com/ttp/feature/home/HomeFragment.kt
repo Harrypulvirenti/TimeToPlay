@@ -5,6 +5,7 @@ import android.view.View
 import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupWithNavController
 import com.ttp.core.base.BaseFragment
+import com.ttp.extensions.android.handleOnBackPressed
 import com.ttp.extensions.kotlin.lazyFast
 import com.ttp.navigation.HomeBottomNavigation
 import com.ttp.navigation.extensions.findChildNavController
@@ -24,6 +25,12 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
         )
 
         setupBottomNavigationView()
+
+        handleOnBackPressed {
+            childNavController.popBackStack().also {
+                updateBottomViewPosition(childNavController.currentDestination)
+            }
+        }
     }
 
     private fun setupBottomNavigationView() {
@@ -31,12 +38,6 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
         bottomNavView.setOnNavigationItemSelectedListener {
             childNavController.navigate(it.itemId)
             true
-        }
-    }
-
-    override fun onBackPressed(): Boolean {
-        return childNavController.popBackStack().also {
-            updateBottomViewPosition(childNavController.currentDestination)
         }
     }
 
