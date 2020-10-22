@@ -5,14 +5,17 @@ import android.view.View
 import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupWithNavController
 import com.ttp.core.base.BaseFragment
+import com.ttp.core.extensions.viewBinding
 import com.ttp.extensions.android.handleOnBackPressed
 import com.ttp.extensions.kotlin.lazyFast
+import com.ttp.feature.home.databinding.FragmentHomeBinding
 import com.ttp.navigation.HomeBottomNavigation
 import com.ttp.navigation.extensions.findChildNavController
 import com.ttp.navigation.extensions.setupSubGraph
-import kotlinx.android.synthetic.main.fragment_home.*
 
 internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
+
+    private val binding by viewBinding(FragmentHomeBinding::bind)
 
     private val childNavController by lazyFast { findChildNavController(R.id.bottomBarNavHostFragment) }
 
@@ -34,8 +37,8 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun setupBottomNavigationView() {
-        bottomNavView.setupWithNavController(childNavController)
-        bottomNavView.setOnNavigationItemSelectedListener {
+        binding.bottomNavView.setupWithNavController(childNavController)
+        binding.bottomNavView.setOnNavigationItemSelectedListener {
             childNavController.navigate(it.itemId)
             true
         }
@@ -48,6 +51,6 @@ internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
             R.id.profileFragment -> R.id.toProfileFragment
             else -> null
         }
-        selectedMenuId?.let { bottomNavView.menu.findItem(it).isChecked = true }
+        selectedMenuId?.let { binding.bottomNavView.menu.findItem(it).isChecked = true }
     }
 }
