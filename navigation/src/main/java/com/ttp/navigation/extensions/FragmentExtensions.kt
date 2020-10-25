@@ -55,11 +55,3 @@ fun Fragment.navigate(
     directions: NavDirections,
     navigatorExtras: Navigator.Extras
 ) = findNavController().navigate(directions, navigatorExtras)
-
-/**
- * Return, if present, the current child [Fragment] displayed in the screen
- *
- * @return [Fragment]
- * */
-val Fragment.currentChildFragment: Fragment?
-    get() = childFragmentManager.primaryNavigationFragment

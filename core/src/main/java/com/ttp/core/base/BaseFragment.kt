@@ -24,16 +24,4 @@ abstract class BaseFragment(@LayoutRes layoutId: Int) : Fragment(layoutId) {
         super.onDestroy()
         unloadKoinModules(getKoinModules())
     }
-
-    /**
-     * Fragment onBackPressed() invoked by the [BaseActivity], allow the current fragment to
-     * handle the onBackPressed event.
-     *
-     * @return Returns true if the event was handled by the fragment,
-     * otherwise return false if the event should be handled by the activity.
-     *
-     * @see BaseActivity.onBackPressed()
-     * @see BaseActivity.currentFragment
-     * */
-    open fun onBackPressed(): Boolean = false
 }
