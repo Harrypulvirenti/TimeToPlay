@@ -28,6 +28,8 @@ private fun BaseExtension.applyBuildDefaultConfig(appId: String? = null) {
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
 
     }
+
+    buildFeatures.viewBinding = true
 }
 
 private fun BaseExtension.applyBuildTypes() {
