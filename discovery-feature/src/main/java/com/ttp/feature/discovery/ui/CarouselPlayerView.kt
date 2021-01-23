@@ -5,12 +5,10 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.ui.PlayerView
 import com.ttp.core.coroutines.viewScope
+import com.ttp.core.extensions.viewBinding
 import com.ttp.entities.Game
-import com.ttp.extensions.android.inflate
-import com.ttp.feature.discovery.R
-import com.ttp.feature.discovery.extensions.play
+import com.ttp.feature.discovery.databinding.ViewCarouselPlayerBinding
 import com.ttp.feature.discovery.extensions.toMediaSource
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -25,16 +23,15 @@ internal class CarouselPlayerView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private val playerVew: PlayerView
+    private val binding: ViewCarouselPlayerBinding
 
     private var data: Game? = null
 
     init {
         isVisible = false
-        inflate(R.layout.view_carousel_player, true)
+        binding = viewBinding(ViewCarouselPlayerBinding::inflate)
 
-        playerVew = findViewById(R.id.carousel_player)
-        playerVew.clipToOutline = true
+        binding.carouselPlayer.clipToOutline = true
     }
 
     fun bind(data: Game) {
@@ -56,7 +53,7 @@ internal class CarouselPlayerView @JvmOverloads constructor(
     }
 
     private suspend fun startPlaying(url: String?, player: ExoPlayer) {
-        playerVew.player = player
+        binding.carouselPlayer.player = player
         url?.toMediaSource()?.let(player::prepare)
         delay(PLAYBACK_DELAY_TIME)
         isVisible = true
@@ -65,6 +62,6 @@ internal class CarouselPlayerView @JvmOverloads constructor(
 
     private fun stopPlaying() {
         isVisible = false
-        playerVew.player = null
+        binding.carouselPlayer.player = null
     }
 }
