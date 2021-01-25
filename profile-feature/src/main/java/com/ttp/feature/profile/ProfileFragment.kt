@@ -1,5 +1,5 @@
 package com.ttp.feature.profile
 
-import com.ttp.core.base.BaseFragment
+import androidx.fragment.app.Fragment
 
-internal class ProfileFragment : BaseFragment(R.layout.fragment_profile)
+internal class ProfileFragment : Fragment(R.layout.fragment_profile)
