@@ -2,9 +2,9 @@ package com.ttp.feature.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupWithNavController
-import com.ttp.core.base.BaseFragment
 import com.ttp.core.extensions.viewBinding
 import com.ttp.extensions.android.handleOnBackPressed
 import com.ttp.extensions.kotlin.lazyFast
@@ -13,7 +13,7 @@ import com.ttp.navigation.HomeBottomNavigation
 import com.ttp.navigation.extensions.findChildNavController
 import com.ttp.navigation.extensions.setupSubGraph
 
-internal class HomeFragment : BaseFragment(R.layout.fragment_home) {
+internal class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val binding by viewBinding(FragmentHomeBinding::bind)
 

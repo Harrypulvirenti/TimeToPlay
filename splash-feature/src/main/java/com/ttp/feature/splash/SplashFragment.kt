@@ -2,18 +2,22 @@ package com.ttp.feature.splash
 
 import android.os.Bundle
 import android.view.View
-import com.ttp.core.base.BaseFragment
+import androidx.fragment.app.Fragment
 import com.ttp.core.extensions.observeEvent
+import com.ttp.core.extensions.registerKoinModules
 import com.ttp.feature.splash.di.splashModule
 import com.ttp.feature.splash.viewmodel.SplashViewModel
 import com.ttp.navigation.extensions.navigate
 import com.ttp.navigation.extensions.withNavOptions
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import org.koin.core.module.Module
 
-internal class SplashFragment : BaseFragment(R.layout.fragment_splash) {
+internal class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private val viewModel: SplashViewModel by viewModel()
+
+    init {
+        registerKoinModules(splashModule)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,6 +29,4 @@ internal class SplashFragment : BaseFragment(R.layout.fragment_splash) {
             )
         }
     }
-
-    override fun getKoinModules(): List<Module> = listOf(splashModule)
 }

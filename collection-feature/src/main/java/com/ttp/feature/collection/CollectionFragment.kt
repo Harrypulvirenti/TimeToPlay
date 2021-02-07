@@ -1,5 +1,5 @@
 package com.ttp.feature.collection
 
-import com.ttp.core.base.BaseFragment
+import androidx.fragment.app.Fragment
 
-internal class CollectionFragment : BaseFragment(R.layout.fragment_collection)
+internal class CollectionFragment : Fragment(R.layout.fragment_collection)

@@ -2,10 +2,10 @@ package com.ttp.core.delegates
 
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
+import com.ttp.extensions.android.doOnCreate
+import com.ttp.extensions.android.doOnDestroy
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
@@ -17,21 +17,13 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
 
     init {
         with(fragment) {
-            lifecycle.addObserver(
-                object : DefaultLifecycleObserver {
-                    override fun onCreate(owner: LifecycleOwner) {
-                        viewLifecycleOwnerLiveData.observe(this@with) { viewLifecycleOwner ->
-                            viewLifecycleOwner.lifecycle.addObserver(
-                                object : DefaultLifecycleObserver {
-                                    override fun onDestroy(owner: LifecycleOwner) {
-                                        binding = null
-                                    }
-                                }
-                            )
-                        }
+            doOnCreate {
+                viewLifecycleOwnerLiveData.observe(this@with) { viewLifecycleOwner ->
+                    viewLifecycleOwner.doOnDestroy {
+                        binding = null
                     }
                 }
-            )
+            }
         }
     }
 
