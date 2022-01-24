@@ -1,10 +1,13 @@
-import Secrets.BASE_URL
 import extensions.applyAndroidDefault
 import extensions.arrow
 import extensions.commonBaseDependencies
 import extensions.defaultBuildConfigField
 import extensions.implementationProject
 import extensions.testingCommon
+import org.gradle.kotlin.dsl.android
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.implementation
+import org.gradle.kotlin.dsl.testImplementation
 
 plugins {
     id(GradlePlugins.androidLibrary)

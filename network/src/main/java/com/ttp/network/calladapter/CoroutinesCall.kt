@@ -18,8 +18,10 @@ internal class CoroutinesCall<T : Any>(
             object : Callback<T> {
                 override fun onResponse(call: Call<T>, response: Response<T>) {
                     with(response) {
-                        if (isSuccessful && body() != null) {
-                            callback.notifyResult(Either.right(body()!!))
+                        @Suppress("UNCHECKED_CAST")
+                        if (isSuccessful) {
+                            val body = body() ?: Unit as T // Support for 204
+                            callback.notifyResult(Either.right(body))
                         } else {
                             callback.notifyResult(Either.left(HttpException(this)))
                         }
